@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="selcourse">88661</integer>
+    <integer name="selsemester">88662</integer>
+    <integer name="selsubject">88663</integer>
+    <integer name="selyear">88664</integer>
+    <integer name="fakedbid">88665</integer>
+</resources>

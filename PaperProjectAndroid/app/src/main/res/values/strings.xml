@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PromisePaperProject</string>
+    <string name="localhost">http://videocall.primasolusoft.com/</string>
+    <!--<string name="localhost">http://localhost/PromisePaper/</string>-->
+</resources>

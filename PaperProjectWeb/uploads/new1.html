@@ -1,0 +1,666 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spidigo</title>
+    <link href="mobile.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+<style type="text/css">
+    #login {
+        width: 325px;
+        *width: 320px;
+        height: 228px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #acb9d2;
+        float: left;
+        margin-right: 5px;
+        *margin-right: 3px;
+        -moz-border-radius: 9px;
+        -webkit-border-radius: 9px;
+        background-color: White;
+        text-align: center;
+    }
+
+    .defbg {
+        height: 30px;
+        background-color: #dee6f3;
+        width: 325px;
+        *width: 320px;
+        margin-top: 12px;
+        text-align: center;
+        padding-top: 6px;
+    }
+    .plan { border-radius: 10px;
+        width: 180px;
+        height: 248px;
+    }
+    .planDiv {
+         
+        width: 185px;
+        height: 230px;
+        *height: 235px;
+        display: block;
+        float: left;
+        margin: 1px;
+        -moz-border-radius: 9px;
+        -webkit-border-radius: 9px;
+        text-align: center;
+        *position: relative;
+    }
+    /* Firefox statrs */
+
+    @-moz-document url-prefix() {
+    }
+    /* Firefox ends */
+
+    .planName {
+        margin-top: 7px;
+        width: 185px;
+        height: 30px;
+        background-color: #343b47;
+        text-align: center;
+    }
+
+    #planlist {
+        margin-top: 0px;
+        text-align: left;
+        font-family: Tahoma;
+        font-size: 12px;
+        color: #5c6b88;
+        list-style-type: disc;
+        line-height: 20px;
+        *margin-top: 15px;
+    }
+
+    #copyR {
+        /*margin-top: 2%;*/
+        font-family: Tahoma;
+        font-size: 12px;
+        color: #758ba3;
+        /*margin-top: 1%*/;
+    }
+
+    .iconImg {
+        margin-left: -425px;
+        margin-top: 5px;
+    }
+
+    label, p, h1 {
+        font-family: Tahoma;
+        font-size: 12px;
+        text-align: left;
+        line-height: 19px;
+        color: #003366;
+        margin-left: 55px;
+        font-weight: 600;
+    }
+
+    #txtUsername, #Password1 {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #acb9d2;
+        height: 19px;
+        width: 216px;
+    }
+
+    #username, #password {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #acb9d2;
+        height: 18px;
+        width: 146px;
+    }
+
+    #bd {
+        background-image: url(images/bgmain_inner_pg.jpg);
+        background-repeat: repeat-x;
+        margin: 0px;
+        padding: 0,0,0,0; /*background-attachment:fixed;*/
+    }
+
+    #outterMainTb {
+        width: 924px;
+        height: 550px;
+        margin-top: 2%;
+        background-image: url(images/bgcenter_inner_pg.jpg);
+        background-repeat: repeat-x;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-top-left-radius: 5px;
+        position: static;
+    }
+
+    #headerImg {
+        background-image: url(images/headerimage_inner_pg.jpg);
+        background-repeat: no-repeat;
+        height: 169px;
+        width: 899px;
+        text-align: center;
+        margin-top: -12px;
+        *position: relative;
+        *top: -2px;
+        *left: 9px;
+    }
+    /* Firefox statrs */
+
+    @-moz-document url-prefix() {
+        #headerImg {
+            margin-top: -5px;
+        }
+    }
+    /* Firefox ends */
+
+    #Menu2 {
+        margin-left: 2px;
+        width: 899px;
+        height: 40px;
+        background-color: Transparent;
+        margin-top: 110px;
+        *margin-top: 113px;
+        *margin-left: 4px;
+    }
+
+        #Menu2 li {
+            display: block;
+            height: 40px;
+            width: 110px;
+            float: left;
+            background-color: Transparent;
+            line-height: 40px;
+        }
+
+        #Menu2 a {
+            font-family: Verdana;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            color: Black;
+            height: 40px;
+            width: 105px;
+            display: block;
+            padding: 2px;
+            text-decoration: none;
+            background-image: url(images/bg_menu.png);
+            background-repeat: repeat-x;
+            outline: none; /*to remove the dotted border when click in firefox*/
+        }
+
+            #Menu2 a:hover {
+                text-decoration: none;
+                background-image: url(images/bg_menu_hover.jpg);
+                background-repeat: repeat-x;
+            }
+
+        #Menu2 .actmenu2 {
+            background-image: url(images/bg_menu_hover.jpg);
+            background-repeat: repeat-x;
+        }
+        /* for ie 6 bug of .png img :- */
+
+        * html #Menu2 .actmenu2 {
+            height: 40px;
+            width: 105px;
+            background-image: none;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/bg_menu_hover.jpg", sizingMethod="scale");
+            cursor: hand;
+        }
+
+        * html #Menu2 a {
+            height: 40px;
+            width: 105px;
+            background-image: none;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/bg_menu.png", sizingMethod="scale");
+        }
+
+            * html #Menu2 a:hover {
+                height: 40px;
+                width: 105px;
+                background-image: none;
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/bg_menu_hover.jpg", sizingMethod="scale");
+                cursor: hand;
+            }
+
+    .more {
+        font-family: Tahoma;
+        font-size: 12px;
+        color: #6699ff;
+        text-decoration: none;
+        outline: none;
+    }
+
+        .more:hover {
+            color: #ff6633;
+        }
+
+    .iconImg {
+        margin-left: -425px;
+        *margin-left: -330px;
+        margin-top: 5px;
+    }
+    <!--
+
+    {
+        SUBMIT;
+    }
+    -->
+</style></head>
+
+<body>
+    <!-- $(if chap-id) -->
+    <form name="sendin" action="http://spidigo.login/login" method="post">
+        <input type="hidden" name="username">
+        <input type="hidden" name="password">
+        <input type="hidden" name="dst" value="">
+        <input type="hidden" name="popup" value="true">
+    </form>
+    <script type="text/javascript" src="./md5.js"></script>
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+	<!--
+    function doLogin() {
+        $.ajax({
+            type: "POST",
+            url: "Register.aspx?CheckCustomerStatus=1",
+            data: { mobileNo: $("#username").val(), passwoRd: $("#password").val() }
+        })
+  .done(function (msg) {
+      if (msg == "Inactive") {
+          //document.getElementById('RenewalBox').style.display = 'block';
+          //document.getElementById('loginBox').style.display = 'none';
+          //document.getElementById('logoBox').style.display = 'none';
+          //alert("Your account is inactive.");
+          $("#dvErrMsg").html("Your account is inactive.");
+          return false;
+      }
+      else if (msg == "Terminated") {
+          //alert("Your account is terminated.");
+          $("#dvErrMsg").html("Your account is terminated.");
+          return false;
+      }
+      else if (msg == "Suspended") {
+          //alert("Your account is suspended.");
+          $("#dvErrMsg").html("Your account is suspended.");
+          return false;
+      }
+      else if (msg == "Active") {
+          
+
+          
+
+          document.sendin.username.value = document.login.username.value;
+          document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+          document.sendin.submit();
+          return false;
+      } else if (msg == "") {
+          $("#dvErrMsg").html("Please enter correct username or password.");
+          return false;
+      }
+      else {
+          $("#dvErrMsg").html(msg);
+          //alert();
+      }
+  });
+
+    return false;
+}
+function clearMsg() {
+    if ($("#dvErrMsg") != null) {
+        $("#dvErrMsg").html("");
+    }
+}
+function openLogin() {
+
+    document.getElementById('loginBox').style.display = 'block';
+    document.getElementById('logoBox').style.display = 'none';
+    return false;
+}
+function openRegister() {
+    document.getElementById('loginBox').style.display = 'none';
+    document.getElementById('RegisterBox').style.display = 'block';
+    return false;
+}
+function doBack() {
+    document.getElementById('loginBox').style.display = 'block';
+    document.getElementById('RegisterBox').style.display = 'none';
+    return false;
+}
+function getOtp() {
+
+    $.ajax({
+        type: "POST",
+        url: "Register.aspx?GetOTP=1",
+        data: { name: $("#customerName").val(), mobileNo: $("#mobileNo").val() }
+    })
+.done(function (msg) {
+    if (msg == "Success") {
+        alert("OTP has been send to your mobile");
+    } else {
+        alert(" Oops " + msg);
+    }
+});
+    return false;
+}
+
+function doRegister() {
+    $.ajax({
+        type: "POST",
+        url: "Register.aspx?Verify=1",
+        data: { name: $("#customerName").val(), mobileNo: $("#mobileNo").val(), otp: $("#otp").val() }
+    })
+.done(function (msg) {
+    if (msg == "Success") {
+        //alert("Registration Successfull , Please login to continue.");
+        doPay(); // Just for Speedigo.
+        document.getElementById('SelectionBox').style.display = 'block';
+        document.getElementById('RegisterBox').style.display = 'none';
+    } else {
+        alert(msg);
+        document.getElementById('RegisterBox').style.display = 'block';
+    }
+});
+    return false;
+}
+
+function getPassward() {
+    $.ajax({
+        type: "POST",
+        url: "Register.aspx?ForgotPassword=1",
+        data: { mobileNo: $("#username").val() }
+    })
+.done(function (msg) {
+    if (msg == "SuccessS") {
+        //alert("Password has been send to your mobile");
+        $("#dvErrMsg").html("Password has been send to your mobile");
+    }
+    else if (msg == "SuccessE") {
+        //alert("Password has been send to your email");
+        $("#dvErrMsg").html("Password has been send to your email.");
+    }
+    else if (msg == "SuccessB") {
+        //alert("Password has been send to your mobile and email");
+        $("#dvErrMsg").html("Password has been send to your mobile and email");
+    }
+    else {
+        $("#dvErrMsg").html(msg);
+    }
+});
+    return false;
+}
+
+function RenewPlan() {
+    $.ajax({
+        type: "POST",
+        url: "Register.aspx?RenewPlan=1",
+        data: { mobileNo: $("#username").val(), PlanId: $("#ddlPlan").val() }
+
+    })
+.done(function (msg) {
+    if (msg == "Success") {
+        alert("Your plan is renewed successfully.");
+        document.getElementById('loginBox').style.display = 'block';
+        document.getElementById('RenewalBox').style.display = 'none';
+    }
+    else {
+        alert(" Oops " + msg);
+    }
+
+});
+
+
+    return false;
+}
+
+function openCreditcard() {
+    document.getElementById('trPlan').style.display = 'block';
+    document.getElementById('btnPay').style.display = 'block';
+    document.getElementById('trPin').style.display = 'none';
+    document.getElementById('trPassword').style.display = 'none';
+    document.getElementById('btnVoucher').style.display = 'none';
+    document.getElementById('rdbVoucher').style.display = 'none';
+    return false;
+}
+
+function openVoucher() {
+    document.getElementById('trPin').style.display = 'block';
+    document.getElementById('trPassword').style.display = 'block';
+    document.getElementById('btnVoucher').style.display = 'block';
+    document.getElementById('trPlan').style.display = 'none';
+    document.getElementById('btnPay').style.display = 'none';
+    document.getElementById('rdbCreditCard').style.display = 'none';
+    return false;
+}
+
+function doPay() {
+    $.ajax({
+        type: "POST",
+        url: "Register.aspx?Pay=1",
+        data: { name: $("#customerName").val(), mobileNo: $("#mobileNo").val(), RegPlan: $("#ddlRegisterPlan option:selected").text(), otp: $("#otp").val() }
+    })
+.done(function (msg) {
+    if (msg == "Success") {
+        alert("Registration Successfull , Please login to continue.");
+        document.getElementById('loginBox').style.display = 'block';
+        document.getElementById('SelectionBox').style.display = 'none';
+    } else {
+        alert(msg);
+        document.getElementById('SelectionBox').style.display = 'block';
+    }
+
+});
+
+
+    return false;
+}
+function doVoucher() {
+    $.ajax({
+        type: "POST",
+        url: "Register.aspx?Voucher=1",
+        data: { name: $("#customerName").val(), mobileNo: $("#mobileNo").val(), otp: $("#otp").val(), Pin: $("#txtPin").val(), Password: $("#txtPassword").val() }
+    })
+.done(function (msg) {
+    if (msg == "Success") {
+        alert("Registration Successfull , Please login to continue.");
+        document.getElementById('loginBox').style.display = 'block';
+        document.getElementById('SelectionBox').style.display = 'none';
+    } else {
+        alert(msg);
+        document.getElementById('SelectionBox').style.display = 'block';
+    }
+
+});
+    return false;
+}
+
+function openCPBox() {
+    $.ajax({
+        type: "POST",
+        url: "Register.aspx?openCPBox=1",
+        data: { mobileNo: $("#username").val() }
+    })
+.done(function (msg) {
+    if (msg == "Success") {
+        document.getElementById('loginBox').style.display = 'none';
+        document.getElementById('CPBox').style.display = 'block';
+    } else {
+        alert(" Oops " + msg);
+    }
+
+});
+    return false;
+}
+function doBackLogin() {
+    document.getElementById('loginBox').style.display = 'block';
+    document.getElementById('CPBox').style.display = 'none';
+    return false;
+}
+function changePassword() {
+    $.ajax({
+        type: "POST",
+        url: "Register.aspx?changePassword=1",
+        data: { mobileNo: $("#username").val(), NewPassword: $("#txtNewPassword").val(), ConfirmPassword: $("#txtConfirmPassword").val() }
+    })
+.done(function (msg) {
+    if (msg == "Success") {
+        alert("Your password is changed successfully , Please login to continue.");
+        document.getElementById('loginBox').style.display = 'block';
+        document.getElementById('CPBox').style.display = 'none';
+    } else {
+        alert(" Oops " + msg);
+    }
+
+});
+    return false;
+}
+
+//-->
+    </script>
+    <!-- $(endif) -->
+
+    <div align="center" id="bd" onclick="clearMsg()">
+        <table align="center" id="outterMainTb" style="z-index: 100;">
+            <tbody>
+                <tr align="center" valign="top">
+                    <td align="center" valign="top" style="padding: 5px; height: 83px;" colspan="3"><a href="http://www.spidigo.com/" target="_blank">
+                        <img id="logo" style="margin-left: 2px; float: left;" alt="" src="images/logo.jpg" border="0"></a>
+                        <img style="margin-top: 20px; margin-right: 10px; float: right;" alt="" src="images/bd_int_ser.jpg">
+                    </td>
+                </tr>
+                <tr align="center" valign="top">
+                    <td align="center" valign="top" style="width: 900px; height: 165px;">
+                        <div align="center" id="headerImg">
+                            <div align="center" style="width: 899px; margin-top: 0px; margin-left: 2px; float: left;">
+                                <ul id="Menu2">
+                                    <li><a class="actmenu2" href="http://103.247.80.24/CaptivePortal/Default.aspx">Login</a> </li>
+                                    <li><a href="http://selfcare.spidigo.com/Customer/Registration.aspx" target="_blank">Register</a> </li>
+                                    <li><a href="http://selfcare.spidigo.com" target="_blank">My Account</a> </li>
+                                    <li><a href="http://selfcare.spidigo.com/Customer/Default.aspx?h8=1&amp;Renew=src" target="_blank">Renew/TopUp</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <table align="left" style="top: -5px; margin-top: 30px; margin-left: 5px; position: relative;" cellpadding="-1">
+                            <tbody>
+                                <tr>
+                                    <td align="left" valign="top">
+                                        <div class="planDiv" style="width: 182px; height: 248px;">
+                                            <font color="#ffff99"><a href="http://www.spidigo.com/?page_id=23780 " target="_blank"><img src="images/R-plan.jpg" class="plan"></a></font>
+                                            
+
+                                           
+                                        </div>
+                                    </td>
+                                    <td align="left" valign="top">
+                                        <div class="planDiv" style="width: 181px; height: 248px;">
+                                            <font color="#ffff99"><a href="http://www.spidigo.com/?page_id=23780 " target="_blank"><img alt="" src="images/B-plan.jpg" class="plan"></a></font>
+                                           
+                                        </div>
+                                    </td>
+                                    <td align="left" valign="top">
+                                        <div class="planDiv" style="width: 183px; height: 247px;">
+                                            <font color="#ffff99"><a href="http://www.spidigo.com/?page_id=23780 " target="_blank"><img alt="" src="images/H-plan.jpg" class="plan"></a></font>
+                                            
+                                        </div>
+                                    </td>
+                                    <td align="left" valign="top">
+                                        <div id="login" style="width: 330px; height: 248px;">
+                                            
+                                            
+
+                                            <!-- removed $(if chap-id) $(endif)  around OnSubmit -->
+                                            <form name="login" action="http://spidigo.login/login" method="post">
+                                                <input type="hidden" name="dst" value="">
+                                                <input type="hidden" name="popup" value="true">
+                                                <div class="defbg" style="font-style: italic; font-weight: bold; font-size: larger;">
+                                                    Internet Access Login
+                                                </div>
+                                                <table align="left" style="width: 306px; height: 151px; text-align: left; color: rgb(0, 51, 102); padding-top: 15px; font-family: Tahoma; font-size: 12px; margin-top: 0px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                
+                                                                <!-- $(if error) -->
+                                                                <div style="color: red; height: 40px; text-align: center" id="dvErrMsg"> </div>
+                                                                <!-- $(endif) -->
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label>Username </label>
+                                                            </td>
+                                                            <td>
+                                                                <input id="username" name="username" type="text" value="prakash_soni">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding-top: 8px;">
+                                                                <label>Password </label>
+                                                            </td>
+                                                            <td>
+                                                                <input id="password" name="password" type="password" value="123456">
+                                                            </td>
+                                                        </tr>
+                                                        <tr valign="bottom">
+                                                            <td align="right" valign="bottom">
+                                                                <input id="btnLogin" style="border-width: 0px; width: 65px; height: 27px; margin-top: 15px; margin-left: 68px;" onclick="javascript: return doLogin();" type="image" src="images/login_btn.jpg" value="Login" name="login">
+                                                            </td>
+                                                            <td>&nbsp;&nbsp;&nbsp;&nbsp; <a class="more" style="font-size: 11px; cursor: pointer; font-weight: normal; margin-top: 50px;" onclick="javascript: return getPassward();">Forgot Password</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td align="center">
+                        <div id="copyR">
+                            <label>
+                                <font color="#FE0000">
+
+						<!--	<strong style="
+    display: block;
+    font-size: 15px;
+    margin-top: -24px;
+    margin-left: 8px;
+">Our helpline number has changed. Please call on 79-40709999 for support/complaint or any other assistance.</strong> -->
+
+							
+							</font>
+                            </label>
+                            <font color="#003366"><strong>SMS "Buy" to 9879786666 for New Connection | SMS "Recharge" to 9879786666 for Renewal</strong></font>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<font color="#000080"><strong>Contact us: Tel. 079-40709999 | E-mail. </strong></font>
+                            <a href="mailto:support@spidigo.com"><font color="#000080"><strong>support@spidigo.com</strong></font></a>
+                            <font color="#000080"><strong> | URL. </strong></font>
+                            <a href="http://www.spidigo.com/"><font color="#000080"><strong>www.spidigo.com</strong></font></a>
+                            
+                            <font color="#000080"><strong>|</strong></font>
+                           <a href="http://www.spidigo.com/?page_id=65" target="_blank">  <font color="#000080"><strong>Terms &amp; Conditions</strong></font></a> 
+                            <font color="#000080"><strong>|</strong></font> 
+                             <a href="http://www.spidigo.com/?page_id=346" target="_blank"> <font color="#000080"><strong> Privacy Policy</strong></font> </a>
+                        </div>
+                        <div>
+                           <label><font color="#000080">© Copyright 2009 | SPiDiGO.Broadband &amp; Internet Services </font></label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div align="center" id="bd">&nbsp;</div>
+    <script type="text/javascript">
+<!--
+    document.login.username.focus();
+    //-->
+    </script>
+
+
+
+</body></html>

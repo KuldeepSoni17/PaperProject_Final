@@ -1,0 +1,65 @@
+Main functionalities:-
+
+-   Selection
+        -   Course
+        -   Semester
+        -   Subject
+        -   Year of examination
+-   Downloading(availability in offline mode)
+-   Offline storage management(open, delete, share file)
+-   Dynamic loading from central database on refresh click
+
+
+progressDialog = new ProgressDialog(getApplicationContext());
+            progressDialog.setTitle("Downloading");
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            progressDialog.setProgress(0);
+            progressDialog.setIndeterminate(true);
+            progressDialog.show();
+
+UI:-
+
+    - SelectionScreen
+            -   Selectable ListView(common for all Course, Semester, Subject, Year)
+    - OfflineStorageMangementScreen
+            -   ListView of papers
+            -   Search UI for papers(search with keywords or can be with checkboxes)
+    - PaperViewScreen
+            -   PDF_View
+            -   Delete button
+            -   Share button
+    - FragmentForPaper(when clicks on year of exam view this fragment along with download option)
+    - CommonMenu
+            -   Refresh
+            -   OfflineStorage
+
+Classes:-
+    - ActivityClasses
+            -   SelectionActivity
+            -   PaperViewActivity
+            -   OfflineStorageActivity
+    - MenuClass(for menu management)
+    - DatabaseHelperClass
+
+LayoutFiles:-
+     -  Activities
+            -Selection
+            -PaperView
+            -OfflineStorage
+
+DatabaseManagement:-
+
+    - PaperDB
+        -   CourseListTable
+                -   CourseID(PK)(int/long)
+                -   CourseName(varchar)
+                -   SemesterVal(int - if 6 means 1 to 6 semester and so)
+        -   SubjectListTable
+                -   SubjectID(PK)
+                -   CourseID(ForeignKey)
+                -   SemesterVal(combining with CourseID it provides the unique Subject)
+        -   PaperListTable
+                -   PaperID(PK)
+                -   Year
+                -   SubjectID(ForeignKey)
+                -   PathOfFileInServer
